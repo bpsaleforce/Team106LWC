@@ -1,0 +1,53 @@
+<template>
+  <h1 style="color: rgb(77, 184, 210);">Hello World. Day 2</h1>  
+  <h1 style="color: rgb(77, 28, 125); ">TESSTTT.HELLOOOOO WORRLLLDD!!! This is my first LWC project</h1>
+  
+  <lightning-card  title="Data Binding One Way">
+    <h2 style="background-color: black; color:aquamarine">My name is {name}</h2>
+
+    <!--
+    <lightning-button label="New version" slot="actions"></lightning-button>
+    <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+    <p slot="footer">Card Footer</p>
+     <lightning-input type="text" label="Enter Your Name Please: "></lightning-input>
+    -->
+   
+    
+</lightning-card>
+
+<lightning-card  title="Data Binding Two Way">
+    
+
+    <!--
+    <lightning-button label="New version" slot="actions"></lightning-button>
+    <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+    <p slot="footer">Card Footer</p>
+    -->
+    <lightning-input 
+    type="text" 
+    label="Enter Your Name Please: " onchange={handleInput}>
+        </lightning-input>
+      <h1>My name is  {firstName}</h1>
+</lightning-card>
+<br>
+<br>
+<lightning-card title="Data Binding Full Name">
+    <lightning-input type="text" label="FirstName: " onblur={handleFirstName}></lightning-input>
+    <lightning-input type="text" label="LastName: " onchange={handleLastName}></lightning-input>
+
+    <p>Full Name: {fullNamePrivider}</p>
+
+</lightning-card>
+
+
+<lightning-card title="Addition">
+
+    <lightning-input type="number" label="First Number" onchange={handlerNum1}></lightning-input>
+    <lightning-input type="number" label="Second Number Range: 1-10" min="1" max="10" onchange={handlerNum2}></lightning-input>
+
+    <!--<p>Addition of two numbers: {total}</p> -->
+    <p>Addition of two numbers is: {Sum}</p>
+</lightning-card>
+
+   
+</template>

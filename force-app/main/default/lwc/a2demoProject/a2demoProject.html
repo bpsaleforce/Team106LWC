@@ -1,0 +1,30 @@
+<template>
+    <lightning-card  title="Calculator">
+        <h1><b>Result: {result}</b></h1>
+        <p>
+        <lightning-button label="1" slot="actions" onclick={number1}></lightning-button>
+        <lightning-button label="2" slot="actions" onclick={number2}></lightning-button>
+        <lightning-button label="3" slot="actions" onclick={number3}></lightning-button>
+        <lightning-button label="*" slot="actions" onclick={mult}></lightning-button>
+        <lightning-button label="C" slot="actions" onclick={zero}></lightning-button>
+    </p>
+        
+        <p><lightning-button label="4" slot="actions" onclick={number4}></lightning-button>
+        <lightning-button label="5" slot="actions" onclick={number5}></lightning-button>
+        <lightning-button label="6" slot="actions" onclick={number6}></lightning-button>
+        <lightning-button label="/" slot="actions" onclick={divi}></lightning-button>    
+    </p>
+    <p>
+        <lightning-button label="7" slot="actions" onclick={number7}></lightning-button>
+        <lightning-button label="8" slot="actions" onclick={number8}></lightning-button>
+        <lightning-button label="9" slot="actions" onclick={number9}></lightning-button>
+        <lightning-button label="+" slot="actions"></lightning-button>
+    </p>
+    <p>
+        <lightning-button label="0" slot="actions" onclick={number0}></lightning-button>
+        <lightning-button label="," slot="actions" onclick={comma}></lightning-button>
+        <lightning-button label="=" slot="actions" onclick={equal}></lightning-button>
+        <lightning-button label="-" slot="actions" onclick={subt}></lightning-button>
+    </p>
+    </lightning-card>
+</template>

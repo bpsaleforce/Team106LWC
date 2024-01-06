@@ -1,0 +1,31 @@
+<template>
+   <lightning-card title="Vehicle composition">
+<h1>VEHILCLE</h1>
+<h1>Brand of Vehicle :: {brandOfVehicle}</h1>
+   <lightning-input type="text" label="Vehicle Brand Name: " onchange={handleBrandName}>
+      </lightning-input>     
+      <br>
+      <lightning-input type="text" label="Engine Model Name: " onchange={handleEngineModel}>
+
+      </lightning-input>
+      <br>
+      <lightning-input type="text" label="Fuel Type : " onchange={handlefueltype}>
+
+      </lightning-input>
+<c-a06engine-model engine-model={engineModelFromVehicle} fuel-type-from-parent={fuelType}>
+
+</c-a06engine-model>
+
+   </lightning-card> 
+
+   <lightning-card title="Vehicle composition">
+      <lightning-combobox   name ='deneme'
+                        label="Select engine feature"
+                        options={secenekler}
+                        value={secilen}
+                        onchange={handlePicklist}>
+  
+   </lightning-combobox>
+  <h1> Brand name {secilen}</h1>
+  </lightning-card>    
+</template>

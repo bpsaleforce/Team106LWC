@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="ENGINE MODEL">
+        <h1>ENGINE MODEL</h1>
+        <h1>Engine Model :: {engineModel}</h1>
+        <c-a06engine-features fuel-type={fuelTypeFromParent} 
+        horse-power=150>
+         <!-- 
+            1.fuelType is converted to kebab case as 
+            fuel-type='any new name';
+            2.hoese power is not allowed to be manupuladted from parent, thats why nothing changes
+          -->
+        </c-a06engine-features>
+        
+           </lightning-card> 
+    
+</template>

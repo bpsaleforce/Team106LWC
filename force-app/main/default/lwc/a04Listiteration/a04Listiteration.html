@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="For each Loop"> 
+        <p>
+            My City List: {cityNames}
+        </p>
+        
+        <template for:each={cityNames} for:item="city">
+         <p key={city}> city name is: {city}
+         </p>   
+        </template>
+
+    </lightning-card>
+
+    <lightning-card title="Iterator"> 
+                
+        <template iterator:it={cityNames}>
+         <p key={it.value} if:true={it.first}> This is Iterator First Line</p>    
+         <p key={it.value}> city name is: {it.value}</p>      
+         <p key={it.value} if:true={it.last}> This is Iterator Last Line</p>    
+         
+        </template>
+
+    </lightning-card>
+
+    <br>
+    <lightning-card title="Iteration on a object List">
+        
+        <template for:each={flowerList} for:item="flower">
+            <p key={flower.id}> Flower Name: {flower.name}</p>   
+            <p key={flower.id}> Family: {flower.family}</p>   
+            <p key={flower.id}> <img src={flower.imgUrl} alt="this is URL" width="100" height="120"> </p>   
+            
+           </template>
+
+    </lightning-card>
+
+    <lightning-card title="Iteration on a object List(BEST PRACTICE)">
+        <ul>
+        <template for:each={flowerList} for:item="flower">
+           <li key={flower.id}>  
+            <p>Flower Name: {flower.name}, </p>
+            <p> Flower Family: {flower.family} </p>   
+             <img src={flower.imgUrl} alt="this is URL" width="100" height="120"> </p>   
+        </li>yes
+           </template>
+        </ul>
+
+    </lightning-card>
+
+</template>

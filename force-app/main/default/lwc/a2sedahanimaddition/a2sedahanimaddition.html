@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Number Addition Seda Hanim">
+        <br>
+                <lightning-input type="number" 
+                label="First Number" 
+                value={sayi1} 
+                onchange={handlesayi1}
+                >
+    <br>
+            </lightning-input>
+                <lightning-input type="number" 
+                label="Second Number" 
+                value={sayi2} 
+                onchange={handlesayi2}>
+            </lightning-input>
+            
+    <br>
+                    Result: {sum}
+                </lightning-card>       
+       
+</template>
