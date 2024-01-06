@@ -3,7 +3,7 @@ public class constructor {
     public Decimal deposit(Decimal dp){
        return myBalance+= dp;
     }    
-    //Create variable
+    //Create variable 123
     public Double myNum=100;
     public constructor(){
         //1. Constructor is inside the class
