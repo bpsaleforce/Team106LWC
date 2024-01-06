@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="data binding homework">
+        <lightning-input type="text" label="Firsname:" onchange={namechange}></lightning-input>
+        <lightning-input type="text" label="Lastname:" onchange={lastnamechange}></lightning-input>
+        <lightning-input type="text" label="Age:" onchange={agechange}></lightning-input>
+      
+    <lightning-input variant="brand" label="Reverse" title="Reverse" onclick={handleClick} type="checkbox"  class="slds-m-left_x-small"></lightning-input>
+    
+    <template if:true={Reverse}>
+        <h2>Reverse: {ReverseNamefunc}</h2>
+    </template>
+    <template if:false={Reverse}>
+        <h1>Fullname: {fullNamefunc}</h1>
+    </template>
+</lightning-card>
+</template>

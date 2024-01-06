@@ -14,9 +14,5 @@ export default class A07trackDecorator extends LightningElement {
         //console.log('LWC RENDERED')
     }
 
-    handleAge(e){
-        this.familyMember.age=e.target.value
-        //console.log('LWC RENDERED')
-    }
 
 }

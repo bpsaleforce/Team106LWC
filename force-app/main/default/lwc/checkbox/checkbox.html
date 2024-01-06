@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="checkbox example">
+    <lightning-input type="checkbox" onchange={changeHand}></lightning-input>
+    <h1 if:false={checkedCond}>Unchecke</h1>
+    <h1 if:true={checkedCond}>Checked</h1>
+</lightning-card>
+</template>

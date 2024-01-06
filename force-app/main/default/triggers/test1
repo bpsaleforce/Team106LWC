@@ -1,0 +1,77 @@
+/*Account - Parent Object
+	Total_Salary__c - Custom Field   --> Store the total Salary of Child Records
+	Maximum_Salary__c - Custom Field  --> Store the Maximum Salary among Child Reocrds
+Account_Salary__c - Child Object
+	Salary__c - Custom Salary
+
+
+Write a trigger for above criteria for all the scenerio.
+*/
+
+//obj: Account
+//insert, update
+//
+
+trigger storevalues on Account(before, update){
+ 
+  
+    Integer total=0;  
+ for(Accoun acc: trigger.new){
+    
+    total= Account_Salary__c+0;
+    
+}
+   
+Total_Salary__c=total;
+
+}
+
+/*
+ trigger UpdateAccountFields on Account_Salary__c (after insert, after update, after delete, after undelete) {
+    if (Trigger.isAfter) {
+        if (Trigger.isInsert || Trigger.isUpdate || Trigger.isUndelete) {
+            // Define a map to store the Account IDs and their respective total salaries and maximum salaries
+            Map<Id, Decimal> accountIdToTotalSalaryMap = new Map<Id, Decimal>();
+            Map<Id, Decimal> accountIdToMaxSalaryMap = new Map<Id, Decimal>();
+            
+            // Iterate through the child records and calculate total salary and maximum salary
+            for (Account_Salary__c childRecord : Trigger.new) {
+                Id accountId = childRecord.Account__c;
+                Decimal salary = childRecord.Salary__c;
+                
+                // Update total salary
+                if (accountIdToTotalSalaryMap.containsKey(accountId)) {
+                    accountIdToTotalSalaryMap.put(accountId, accountIdToTotalSalaryMap.get(accountId) + salary);
+                } else {
+                    accountIdToTotalSalaryMap.put(accountId, salary);
+                }
+                
+                // Update maximum salary
+                if (accountIdToMaxSalaryMap.containsKey(accountId)) {
+                    accountIdToMaxSalaryMap.put(accountId, Math.max(accountIdToMaxSalaryMap.get(accountId), salary));
+                } else {
+                    accountIdToMaxSalaryMap.put(accountId, salary);
+                }
+            }
+            
+            // Update the parent Account records with the calculated values
+            List<Account> accountsToUpdate = new List<Account>();
+            for (Id accountId : accountIdToTotalSalaryMap.keySet()) {
+                Account acc = new Account(Id = accountId);
+                acc.Total_Salary__c = accountIdToTotalSalaryMap.get(accountId);
+                acc.Maximum_Salary__c = accountIdToMaxSalaryMap.get(accountId);
+                accountsToUpdate.add(acc);
+            }
+            
+            // Update the parent Account records
+            if (!accountsToUpdate.isEmpty()) {
+                update accountsToUpdate;
+            }
+        } else if (Trigger.isDelete) {
+            // Handle record deletions if necessary
+            // You may need to recalculate the totals and maximums for the affected parent records
+        }
+    }
+}
+
+ */

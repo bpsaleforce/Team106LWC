@@ -9,7 +9,7 @@ public class AccountTriggerHandler {
            } else{
                acc.Rating='Cold';
            }
-               
+              //upload test 
     	}
     }
     public static void createRelatedOpp(List<account> lst) //afterInsert

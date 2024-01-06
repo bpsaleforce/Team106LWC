@@ -51,20 +51,11 @@ export default class A2demoProject extends LightningElement {
         this.result==0 ? this.result=''+0: this.result=''+this.result+0;      
     } 
                    
+    comma(){
+         this.result==0 ? this.result=0+',': this.result.includes(',') ? this.result : this.result + ',';
+                     
+             }  
     zero(){
         this.result=0             
             }                 
-            
-    comma(){
-        this.result==0 ? this.result=0+',': this.result.includes(',') ? this.result : this.result + ',';
-       /* 
-        switch(this.result){
-            ',' ? this.result : this.result + ',';
-        }
-        this.result==0 ? this.result=0+',': this.result.includes(',') ? this.result : this.result + ',';
-        this.result==0 ? this.result=0+',': this.result.includes(',') ? this.result : this.result + ',';  
-        this.result==0 ? this.result=0+',': this.result.includes(',') ? this.result : this.result + ',';           
-             }  
-    */
-    }
-}
+            }
